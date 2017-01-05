@@ -26,4 +26,7 @@ feature "visiting the categories page" do
     expect(page).to have_content "Sweeet"
     expect(page).to have_content 'All Categories'
   end
+
+  scenario "the user can click on an article title and will redirect"
 end
+
