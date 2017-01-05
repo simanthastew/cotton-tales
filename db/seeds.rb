@@ -20,6 +20,8 @@ when "development", "test"
   Article.create(title: "Jackrabbit", body: "Jackrabbit is a species of hare local to North America. An elusive creature, no one is sure what is the sound of their call.", author_id: rand(50))
   Article.create(title: "Bugs Bunny", body: "Bugs Bunny is a cartoon rabbit known for causing trouble for the noble Daffy Duck.", author_id: rand(50))
 
+  Categorization.delete_all
+
   Categorization.create(category_id: 2, article_id: 1)
   Categorization.create(category_id: 1, article_id: 1)
   Categorization.create(category_id: 3, article_id: 2)
