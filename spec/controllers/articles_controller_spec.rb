@@ -65,4 +65,42 @@ describe ArticlesController do
       expect(response).to render_template(:edit)
     end
   end
+
+  describe "POST #create" do
+    context "when valid parameters are passed" do
+      before(:each) do
+        post :create, { article: {title: "Test", body: "test body", author_id: 1}}
+      end
+      it "responds with status 302" do
+        expect(response).to have_http_status 302
+      end
+      it "creates a new article in the database" do
+        expect(article.save).to be true
+      end
+      it "assigns the newly created article as @article" do
+        expect(assigns(:article)).to eq(Article.last)
+      end
+      it "redirects to the newly created article" do
+        expect(response).to redirect_to Article.last
+      end
+    end
+    context "when invalid parameters are passed" do
+      before(:each) do
+        count = Article.count
+        post :create, { article: {body: "test body", author_id: 1}}
+      end
+      it "responds with status 422: Unprocessable Entity" do
+        expect(response).to have_http_status 422
+      end
+      it "does not create a new article in the database" do
+        expect(Article.count).to eq count
+      end
+      it "assigns the unsaved article as @article" do
+        expect(assigns(:article)).to be_a_new Article
+      end
+      it "renders the #new template" do
+        expect(response).to render_template :new
+      end
+    end
+  end
 end
