@@ -12,3 +12,4 @@ RSpec.describe Categorization, type: :model do
       expect(categorization.article_id).to eq(1)
     end
   end
+end
