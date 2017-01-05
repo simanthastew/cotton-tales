@@ -35,9 +35,9 @@ feature "visiting the categories page" do
   #   new_article = category.articles.create(title: "Bunnies!", body: "Body of bunnies", author_id: new_user.id)
   #   within(".recent-articles") do
   #     expect(page).to have_content new_article.title
-  #     click_link("Show more")
+  #     # click_link("Show more")
   #   end
-  #   expect(page).to have_current_path article_path(new_article)
+  #   # expect(page).to have_current_path article_path(new_article)
   # end
 end
 
