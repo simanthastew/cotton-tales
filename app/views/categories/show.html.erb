@@ -1,8 +1,13 @@
-<h1> Category: <%= @category.name %> </h1>
-<%@category.articles.each do |article| %>
-  <strong><p><%= article.title %></p></strong>
-  <p><%= article.body %></p>
-<%end%>
-
+<h1> Category:
+  <ul class="inline recent-articles">
+  <% if @category %>
+    <%= @category.name %> </h1>
+    <%@category.articles.each do |article| %>
+      <strong><p><%= article.title %></p></strong>
+      <p><%= article.body %></p>
+      <br />
+    <%end%>
+  <%end%>
+</ul>
 
 <p><%= link_to 'All Categories', categories_path %></p>
