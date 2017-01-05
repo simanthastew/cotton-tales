@@ -6,6 +6,7 @@
       <strong><li><p><%= article.title %></p></li></strong>
       <p><%= article.body %></p>
       <br />
+      <p><%= link_to "Show More", article_path(article) %></p>
     <%end%>
     </ol>
   <%else%><p>No articles to display</p>

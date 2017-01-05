@@ -20,12 +20,12 @@ describe CategoriesController do
 
   describe "GET #show" do
     before(:each) do
-      get :show
+      get :show, {id: sample_category.id}
     end
     it "responds with status code 200" do
       expect(response).to have_http_status 200
     end
-    it "assigns all the categories to @categories" do
+    it "assigns all the category to sample category" do
       expect(assigns(:category)).to eq(sample_category)
     end
     it "renders the :show template" do

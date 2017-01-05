@@ -15,8 +15,6 @@ feature "visiting the categories page" do
     expect(page).to have_content 'Cute'
     expect(page).to have_content 'All Categories'
   end
-
-  # scenario "the user can click on all categories and see them "
 end
 
 feature "visiting the categories page" do
@@ -36,9 +34,9 @@ feature "visiting the categories page" do
     visit("/categories/#{category.id}")
     within(".recent-articles") do
       expect(page).to have_content new_article.title
-      # click_link("Show more")
+      click_link("Show More")
     end
-    # expect(page).to have_current_path article_path(new_article)
+    expect(page).to have_current_path article_path(new_article)
   end
 end
 
