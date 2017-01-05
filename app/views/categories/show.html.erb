@@ -1,9 +1,9 @@
 <h1>Category: <%= @category.name %> </h1>
-<p><%@category.articles.each do |article| %>
-  <%= article.title %>
-  <%= article.body %>
-  <%end%>
+<%@category.articles.each do |article| %>
+  <strong><p><%= article.title %></p></strong>
+  <p><%= article.body %></p>
+<%end%>
 
 
 
-<p><%= link_to 'All Categories', categories_path %>
+<p><%= link_to 'All Categories', categories_path %></p>
