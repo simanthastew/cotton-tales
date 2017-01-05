@@ -1,5 +1,3 @@
-require 'faker'
-
 User.delete_all
 
 
