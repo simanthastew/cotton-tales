@@ -29,15 +29,16 @@ feature "visiting the categories page" do
     expect(page).to have_content 'All Categories'
   end
 
-  # scenario "the user sees a list of articles and can view them" do
-  #   category = Category.create(:name => "Cute")
-  #   new_user = User.create(username: "Tyler", password: "password")
-  #   new_article = category.articles.create(title: "Bunnies!", body: "Body of bunnies", author_id: new_user.id)
-  #   within(".recent-articles") do
-  #     expect(page).to have_content new_article.title
-  #     # click_link("Show more")
-  #   end
-  #   # expect(page).to have_current_path article_path(new_article)
-  # end
+  scenario "the user sees a list of articles and can view them" do
+    category = Category.create(:name => "Cute")
+    new_user = User.create(username: "Tyler", password: "password")
+    new_article = category.articles.create(title: "Bunnies!", body: "Body of bunnies", author_id: new_user.id)
+    visit("/categories/#{category.id}")
+    within(".recent-articles") do
+      expect(page).to have_content new_article.title
+      # click_link("Show more")
+    end
+    # expect(page).to have_current_path article_path(new_article)
+  end
 end
 
