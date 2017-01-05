@@ -6,4 +6,5 @@ RSpec.describe Category, type: :model do
       category = Category.create(name: "Cute")
       expect(category.name).to eq("Cute")
     end
+  end
 end
