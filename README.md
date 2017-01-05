@@ -2,6 +2,8 @@
 ### Team TeaMTime presents- Rabbit-Holes/CottonTails/The Burrow/Whatership Up?/(TBD)
 ### A blog for Stan Greene
 -----------------
+![build-status](https://travis-ci.org/TylerSmall19/cotton-tales.svg?branch=master)
+-----------------
 ## Purpose
 TBD is a website containing user-generated and edited content regarding rabbits, both real and imaginary.
 -----------------
