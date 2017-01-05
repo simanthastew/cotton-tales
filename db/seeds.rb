@@ -1,12 +1,15 @@
+Category.delete_all
+
+Category.create(name: "cute")
+Category.create(name: "fictional")
+Category.create(name: "irl")
+
 case Rails.env
 when "production"
-  Category.delete_all
-  Category.create(name: "cute")
-  Category.create(name: "fictional")
-  Category.create(name: "irl")
-when "development"
+  # Seeds ONLY to be only on Heroku DB during deployment.
+when "development", "test"
+  # Seeds ONLY to run on development/test DBs
   User.delete_all
-
   users = 50.times.map do
     User.create!( username: Faker::Internet.user_name,
                   password: "password"
