@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find_by(params[:id])
+    @article = Article.find_by(id: params[:id])
   end
 
   def edit
-    @article = Article.find_by(params[:id])
+    @article = Article.find_by(id: params[:id])
   end
 
   def new
