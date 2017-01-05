@@ -5,5 +5,5 @@ class Article < ActiveRecord::Base
   has_many :revisions
 
   validates :title, presence: true, uniqueness: true
-  validates :author
+  validates :author, presence: true
 end
