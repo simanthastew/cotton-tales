@@ -39,9 +39,9 @@ Ckeditor.setup do |config|
 
   # Customize ckeditor assets path
   # By default: nil
-  if Rails.env == 'production'
-    config.asset_path = 'https://the-rabbit-hole.herokuapp.com/public/assets/ckeditor/'
-  end
+  # if Rails.env == 'production'
+  config.asset_path = 'https://the-rabbit-hole.herokuapp.com/public/assets/ckeditor/'
+  # end
 
   # To reduce the asset precompilation time, you can limit plugins and/or languages to those you need:
   # By default: nil (no limit)
