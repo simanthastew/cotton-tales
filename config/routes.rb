@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :articles
+  get 'articles/search' => 'articles#search', as: 'search'
   get "/articles/:id/edit" => "revisions#new"
-
   resources :users, only: [:new, :create]
 
   get "categories/:id/articles" => "categories#show"
