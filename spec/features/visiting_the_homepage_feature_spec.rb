@@ -4,6 +4,8 @@ feature 'visiting the homepage' do
 
   context 'when a user is logged in' do
     scenario 'there is a link to the new article form' do
+      visit '/'
+
       visit '/sessions/new'
       user = User.create(username: 'sam', password: 'password')
 
@@ -21,6 +23,8 @@ feature 'visiting the homepage' do
     end
 
     scenario 'if a user is logged in, the user can log out' do
+      visit '/'
+
       visit '/sessions/new'
       user = User.create(username: 'sam', password: 'password')
 

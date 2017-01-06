@@ -1,30 +1,32 @@
 <div id="container">
   <div id="home-cat-display">
-  <div class='search'>
+    <div class='search'>
  <%= form_tag(search_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Articles" %>
     <%= submit_tag "Search", :name => nil %>
 <% end %> </div>
-  <h1>Categories</h1>
-    <ul id='category-list'>
+  <h1><%= link_to 'Categories', categories_path %></h1>
+    <div id='category-list'>
+
       <% if @categories.any?  %>
         <% @categories.each do |cat| %>
-          <li><%= link_to cat.name, category_path(cat) %></li>
+          <span><%= link_to cat.name, category_path(cat) %><br></span>
         <% end %>
-      </ul>
+      </div>
     <% end %>
   </div>
 
   <div id="home-art-display">
-    <h1>Articles</h1>
-    <ul id='articles-list'>
+    <h1><%= link_to 'Articles', articles_path %></h1>
+    <div id='articles-list'>
       <% if @articles.any?  %>
         <% @articles.each do |art| %>
-          <li> <% if art.thumbnail %> <img src="<%=art.thumbnail%>" style="width:100px;height:100px"> <% else %> <img src="https://raw.githubusercontent.com/TylerSmall19/cotton-tales/NoahRGuy-logo/logo.png" style="width:100px;height:100px"> <% end %> <%= link_to art.title, article_path(art) %> <br>
-          <p><%= art.shorten %></p>
-          </li>
+
+           <% if art.thumbnail %> <img src="<%=art.thumbnail%>" style="width:100px;height:100px;dispaly:inline-block"> <% else %> <img src="https://raw.githubusercontent.com/TylerSmall19/cotton-tales/NoahRGuy-logo/logo.png" style="width:100px;height:100px"> <% end %> <span><%= link_to art.title, article_path(art) %><br>
+          <%= art.shorten %>
+          </span><br><br>
         <% end %>
-      </ul>
+      </div>
     <% end %>
   </div>
 </div>
