@@ -7,11 +7,14 @@ class Article < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true
   validates :author, presence: true
 
+  def shorten
+  	body[0...50] + '...'
+  end
+
   def update_article
     if self.revisions.any?
       self.body = self.revisions.last
     end
     self
   end
-
 end
