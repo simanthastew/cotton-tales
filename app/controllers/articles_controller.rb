@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find_by(id: params[:id])
+    @article = update_article(@article)
   end
 
   def new

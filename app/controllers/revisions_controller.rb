@@ -13,5 +13,6 @@ class RevisionsController < ApplicationController
   end
 # POST /articles/:article_id/revisions
   def create
+
   end
 end

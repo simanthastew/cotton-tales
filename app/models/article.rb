@@ -6,4 +6,13 @@ class Article < ActiveRecord::Base
 
   validates :title, presence: true, uniqueness: true
   validates :author, presence: true
+
+  def update_article(article)
+    if @article.revisions.any?
+      @article.body = @article.revisions.last
+    end
+    @article
+  end
+  helper_method :update_article(article)
+
 end
