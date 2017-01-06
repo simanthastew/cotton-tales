@@ -9,11 +9,15 @@ class Revision < ActiveRecord::Base
   private
     def set_guest
       if self.author.nil?
-        self.author = User.create(username: generate_user, password: "password")
+        self.author = User.create(username: generate_user, password: generate_password)
       end
     end
 
     def generate_user
       "Guest-" + SecureRandom.hex(3)
+    end
+
+    def generate_password
+      SecureRandom.hex(10)
     end
 end
