@@ -1,11 +1,10 @@
 # Cotton Tales
-### Team TeaMTime presents- Rabbit-Holes/CottonTails/The Burrow/Whatership Up?/(TBD)
-### A blog for Stan Greene
+### Team TeaMTime presents- The Rabbit Hole
 -----------------
 ![build-status](https://travis-ci.org/TylerSmall19/cotton-tales.svg?branch=master)
 -----------------
 ## Purpose
-TBD is a website containing user-generated and edited content regarding rabbits, both real and imaginary.
+The Rabbit Hole is a website containing user-generated and edited content regarding rabbits, both real and imaginary. The Rabbit Hole is a Dev Bootcamp simulated client project.
 -----------------
 ## Team Norms
 - Afternoon Standup w/ Tea @ 4:00 PM
@@ -20,7 +19,7 @@ TBD is a website containing user-generated and edited content regarding rabbits,
 - Stay positive, have fun, be kind!
 - Morning checkin, optional check-ins before and after lunch, quick end-of-day check-in
 - Be prepared to expain every line of code you write
-- FEEEEEEEDBAAAAACK! (Code & Team)
+- Feedback! (Code & Team)
 -------------------
 ## User Stories
 - A User can login to the site
