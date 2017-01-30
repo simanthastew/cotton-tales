@@ -1,6 +1,7 @@
 # Cotton Tales
 ### Team TeaMTime presents- The Rabbit Hole
 https://the-rabbit-hole.herokuapp.com/
+
 -----------------
 ![build-status](https://travis-ci.org/TylerSmall19/cotton-tales.svg?branch=master)
 -----------------
@@ -20,7 +21,7 @@ The Rabbit Hole is a website containing user-generated and edited content regard
 - Stay positive, have fun, be kind!
 - Morning checkin, optional check-ins before and after lunch, quick end-of-day check-in
 - Be prepared to expain every line of code you write
-- FEEEEEEEDBAAAAACK! (Code & Team)
+- Feedback! (Code & Team)
 -------------------
 ## User Stories
 - A User can login to the site
